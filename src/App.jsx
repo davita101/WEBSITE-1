@@ -36,7 +36,7 @@ export default function App() {
               <br />
               <div className='font-bold flex justify-between px-5'>
                 <h4>weather</h4>
-                <span className='text-gray-800'>{Math.floor(data?.weather?.[0]?.main) || "no data"}</span>
+                <span className='text-gray-800'>{(data?.weather?.[0]?.main) || "no data"}</span>
               </div>
             </div>) :
             <div className='my-5 border-2 rounded-sm border-gray-500 p-5'>
