@@ -31,7 +31,7 @@ export default function App() {
               </div>
               <div className='font-bold flex justify-between px-5'>
                 <h4>temp</h4>
-                <span className='text-gray-800'>{Math.floor(data?.main?.temp) - 273.15 || "no data"} C</span>
+                <span className='text-gray-800'>{Math.round(data?.main?.temp - 273.15)  || "no data"} C</span>
               </div>
               <br />
               <div className='font-bold flex justify-between px-5'>
