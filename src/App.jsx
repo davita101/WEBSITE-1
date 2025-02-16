@@ -31,7 +31,7 @@ export default function App() {
               </div>
               <div className='font-bold flex justify-between px-5'>
                 <h4>temp</h4>
-                <span className='text-gray-800'>{data?.main?.temp || "no data"}</span>
+                <span className='text-gray-800'>{data?.main?.temp - 273 || "no data"} C</span>
               </div>
               <br />
               <div className='font-bold flex justify-between px-5'>
