@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
@@ -10,6 +9,7 @@ export default function App() {
       .then(res => res.json())
       .then(x => setData(x))
   }, [updateCity])
+  console.log(Math.floor((data?.weather?.[0]?.main)))
   return (
     <div className='font-sans px-2 md:text-start text-center'>
       <div className='flex items-center h-screen justify-center flex-col '>
@@ -31,12 +31,12 @@ export default function App() {
               </div>
               <div className='font-bold flex justify-between px-5'>
                 <h4>temp</h4>
-                <span className='text-gray-800'>{data?.main?.temp - 273 || "no data"} C</span>
+                <span className='text-gray-800'>{Math.floor(data?.main?.temp) - 273 || "no data"} C</span>
               </div>
               <br />
               <div className='font-bold flex justify-between px-5'>
                 <h4>weather</h4>
-                <span className='text-gray-800'>{data?.weather?.[0]?.main || "no data"}</span>
+                <span className='text-gray-800'>{Math.floor(data?.weather?.[0]?.main) || "no data"}</span>
               </div>
             </div>) :
             <div className='my-5 border-2 rounded-sm border-gray-500 p-5'>
